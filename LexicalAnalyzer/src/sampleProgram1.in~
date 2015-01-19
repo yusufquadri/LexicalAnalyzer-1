@@ -1,0 +1,25 @@
+
+
+int main () {
+
+	sampleProgram1(merve, 18);
+
+
+}
+
+
+String sampleProgram1 (String name, int yas) {
+
+
+	int dogumTarihi = 2014 - yas;
+
+	bas(name);
+
+	bas(dogumTarihi);
+	
+	String mesaj = "MUTLUYILLAR";
+
+	bas(mesaj);
+
+}
+

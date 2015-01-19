@@ -1,0 +1,25 @@
+
+int main () {
+
+	boolean ciftli = true;
+
+	int counter = 0;
+
+	String name;
+
+	iken(ciftli) {
+	
+		counter = counter + 1;
+		
+		eger ( counter # 10 ) {
+			
+			al(name);
+			bas(name);
+		}
+	
+	}
+
+}
+
+
+

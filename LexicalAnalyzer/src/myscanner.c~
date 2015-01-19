@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include "myscanner.h"
+
+extern int yylex();
+extern int yylineno;
+extern char* yytext;
+
+int main(void) {
+
+	int ntoken, vtoken;
+	
+	ntoken = yylex();
+	printf("TOKEN 	   -	LEXEME\n");
+	while(ntoken) {
+		
+		switch(ntoken){
+		    case 0 :
+		       break; 
+		    case 1 :		       
+		       printf("______________________\n");
+		       printf("eger	   	eger\n");
+		       break; 
+  		    case 2 :
+		       printf("degilse	    	degilse\n");
+		       break; 
+		    case 3 :
+		       printf("iken		iken\n");
+		       break;
+		    case 4 :
+		       printf("bas		bas\n");
+		       break; 
+		    case 5 :
+		       printf("al		al\n");
+		       break; 
+  		    case 6 :
+		       printf("iki_nokta	:\n");
+		       break; 
+  		    case 7 :
+		       printf("artı		+\n");
+		       break; 
+		    case 8 :
+		       printf("eksi		-\n");
+		       break; 
+		    case 9 :
+		       printf("çarpı		*\n");
+		       break; 
+		    case 10 :
+		       printf("bölü		/\n");
+		       break; 
+		    case 11 :
+		       printf("neg		é\n");
+		       break;
+		    case 12 :
+		       printf("parantez_ac	(\n");
+		       break; 
+		    case 13 :
+		       printf("parantez_kapat	)\n");
+		       break;
+		    case 14 :
+		       printf("s_parantez_ac	{\n");
+		       break;		    
+		    case 15 :
+		       printf("s_parantez_kapat	}\n");
+		       break; 
+		    case 16 :
+		       printf("integer		1,2, 324, ...\n");
+		       break; 
+  		    case 17 :
+		       printf("degisken		result, sum, i2, ...\n");
+		       break; 
+  		    case 18 :
+		       printf("semikolon	;\n");
+		       break; 
+  		    case 19 :
+		       printf("equals		#\n");
+		       break; 
+  		    case 20 :
+		       printf("ata		=\n");
+		       break; 
+  		    case 21 :
+		       printf("Data_Type	String\n");
+		       break; 
+  		    case 22 :
+		       printf("Data_Type	int\n");
+		       break; 
+  		    case 23 :
+		       printf("Data_Type	boolean\n");
+		       break; 
+  		    case 24 :
+		       printf("virgul		,\n");
+		       break; 
+
+		}		
+		ntoken = yylex();		
+	}
+	return 0;
+}

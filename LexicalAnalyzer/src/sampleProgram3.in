@@ -1,0 +1,29 @@
+
+
+int main () {
+
+
+	boolean durum = false;
+
+	boolean durum2 = true;
+	
+
+	int sayi = 100;
+
+	eger (durum) { 
+
+		al(sayi);
+		bas(sayi);
+
+	}
+	degilse {
+
+		iken (durum2) {
+		
+			bas(sayi);
+
+		}
+
+	}
+
+}

@@ -1,0 +1,40 @@
+%{
+#include "myscanner.h"
+%}
+
+%%
+:		return iki_nokta;
+"+"		return ARTI;
+"-"		return EKSI;
+"*"		return CARPI;
+"/"		return BOLU;
+"é"		return NEG;
+"("		return PARANTEZ_AC;
+")"		return PARANTEZ_KAPAT;
+"{"		return S_PARANTEZ_AC;
+"}"		return S_PARANTEZ_KAPAT;
+"#"		return EQUALS;
+;		return SEMIKOLON;
+"="		return ATA;
+"		return TIRNAK;
+","		return VIRGUL;
+"String"	return STRING;
+"int"		return INT;
+"boolean"	return BOOLEAN;
+"eger"		return EGER;
+"degilse" 	return DEGILSE;
+"iken" 		return IKEN;
+"bas"		return BAS;
+"al"		return AL;
+[a-zA-Z][_a-zA-Z0-9]* return IDENTIFIER;
+[1-9][0-9]*	      return INTEGER;
+[ \t\n]			;
+.	printf("unexpected character\n");
+%%
+
+int yywrap(void) {
+
+	return 1;
+
+}
+
